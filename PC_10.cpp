@@ -1,5 +1,9 @@
 
 #include "PC_10.h"
+/**
+ *
+ * @param n - número de rodadas do programa
+ */
 void PC_10(int const n) {
 
     // Definindo as variáveis para os cálculos

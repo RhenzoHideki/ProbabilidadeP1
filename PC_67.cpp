@@ -1,5 +1,9 @@
 
 #include "PC_67.h"
+/**
+ *
+ * @param n - número de rodadas do programa
+ */
 void PC_67(int const n){
     srand(time(NULL));
     int count = 0;
