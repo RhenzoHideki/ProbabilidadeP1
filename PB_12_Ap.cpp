@@ -38,22 +38,22 @@ void PB_12_Ap(int const n) {
     double prob_b[5] = {0}; // inicializa com zero
     int total_criancas = freq[0] + 2*freq[1] + 3*freq[2] + 4*freq[3] + 5*freq[4];
     for (int i = 0; i < n; i++) {
-        int f = rand() % 20 +1; // escolhe uma familia ao acaso
+        int f = rand() % 48; // escolhe uma criança ao acaso
         int criancas;
         if (f < freq[0]) {
             prob_b[0] += 1;
-        } else if (f < freq[0] + freq[1]) {
+        } else if (f < freq[0] + freq[1]*2) {
             prob_b[1] += 1;
-        } else if (f < freq[0] + freq[1] + freq[2]) {
+        } else if (f < freq[0] + freq[1]*2 + freq[2]*3) {
             prob_b[2] += 1;
-        } else if (f < freq[0] + freq[1] + freq[2] + freq[3]) {
+        } else if (f < freq[0] + freq[1]*2 + freq[2]*3 + freq[3]*4) {
             prob_b[3] += 1;
         } else {
             prob_b[4] += 1;
         }
     }
     for (int i = 0; i < 5; i++) {
-        prob_b[i] /=(total_criancas*n);
+        prob_b[i] /=(n);
         cout << "Probabilidade da crianca vir de uma familia com " << i+1 << " criancas: " << prob_b[i] << endl;
     }
 
