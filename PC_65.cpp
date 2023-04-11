@@ -22,8 +22,8 @@ void PC_65(int const n){
         int j;
         for (j = 0; j < tentativas; j++)
         {
-            int guess = rand() % (chaves - j); // escolhe uma chave aleatória que ainda não foi testada
-            if (guess == key)
+            int sorteio = rand() % (chaves - j); // escolhe uma chave aleatória que ainda não foi testada
+            if (sorteio == key)
             {
                 break; // acertou a chave
             }

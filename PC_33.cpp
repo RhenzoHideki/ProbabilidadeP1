@@ -24,12 +24,12 @@ void PC_33(int const n){
     }
 
     // calcula a probabilidade condicional
-    float p_acerto_dado_a = (float)acertos / n;
+    float p_acerto = (float)acertos / n;
     float p_a = 0.9;                                                  // probabilidade de A acertar
     float p_b = 0.8;                                                  // probabilidade de B acertar
     float p_c = 0.5;                                                  // probabilidade de C acertar
     float p_pelo_menos_um_acerto = 1 - (1 - p_a) * (1 - p_b) * (1 - p_c); // probabilidade do alvo ser atingido pelo menos uma vez
 
-    float p_a_given_hit = (p_acerto_dado_a * p_a) / p_pelo_menos_um_acerto;
-    cout << "Probabilidade de o alvo ser atingido pelo menos uma vez dado que o atirador A acerta: " << p_a_given_hit << endl;
+    float p_a_dado_acerto = (p_acerto * p_a) / p_pelo_menos_um_acerto;
+    cout << "Probabilidade de o alvo ser atingido pelo menos uma vez dado que o atirador A acerta: " << p_a_dado_acerto << endl;
 }
